@@ -25,3 +25,17 @@ git clone https://github.com/did-method-plc/did-method-plc.git
 ```
 pnpm install --pm-on-fail=ignore
 ```
+
+### Step 3: build
+
+```
+pnpm --pm-on-fail=ignore build
+```
+
+### Step 4
+
+### Step 5: run server
+
+```
+pnpm --pm-on-fail=ignore start
+```
