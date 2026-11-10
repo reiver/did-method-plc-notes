@@ -69,3 +69,19 @@ And, you would replace `2582` with whatever you want your port to be.
 ```
 cd did-method-plc/packages/server
 ```
+
+#### (Docker) Step 4: docker
+
+```
+docker compose -f pg/docker-compose.yaml up -d db
+```
+
+#### (Docker) Step 5: run server
+
+```
+DATABASE_URL=postgresql://pg:password@localhost:5432/postgres \
+PORT=2582 \
+DEBUG_MODE=1 \
+ENABLE_MIGRATIONS=true \
+pnpm --pm-on-fail=ignore start
+```
