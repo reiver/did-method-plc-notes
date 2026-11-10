@@ -20,19 +20,34 @@ Here are the steps to do that.
 git clone https://github.com/did-method-plc/did-method-plc.git
 ```
 
-### Step 2: install dependencies
+### Step 2: go inside
+
+```
+cd did-method-plc
+```
+
+-----
+
+Now you have to decide whether you want to run it bare on your computer, or run it within a Docker container.
+
+-----
+
+### Bare
+
+
+#### (Bare) Step 3: install dependencies
 
 ```
 pnpm install --pm-on-fail=ignore
 ```
 
-### Step 3: build
+#### (Bare) Step 4: build
 
 ```
 pnpm --pm-on-fail=ignore build
 ```
 
-### Step 4: run server
+#### (Bare) Step 5: run server
 
 ```
 DATABASE_URL=postgres://postgres@localhost:5433/plc \
@@ -44,3 +59,13 @@ pnpm --pm-on-fail=ignore start
 Where you would replace `postgres://postgres@localhost:5433/plc` with whatever the URL to your Postgres sever is.
 
 And, you would replace `2582` with whatever you want your port to be.
+
+---
+
+### Docker
+
+#### (Docker) Step 3: directory
+
+```
+cd did-method-plc/packages/server
+```
