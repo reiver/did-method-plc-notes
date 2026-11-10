@@ -32,7 +32,9 @@ pnpm install --pm-on-fail=ignore
 pnpm --pm-on-fail=ignore build
 ```
 
-### Step 4
+### Step 4: configure
+
+
 
 ### Step 5: run server
 
