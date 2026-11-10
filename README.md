@@ -32,12 +32,15 @@ pnpm install --pm-on-fail=ignore
 pnpm --pm-on-fail=ignore build
 ```
 
-### Step 4: configure
-
-
-
-### Step 5: run server
+### Step 4: run server
 
 ```
+DATABASE_URL=postgres://postgres@localhost:5433/plc \
+PORT=2582 \
+DEBUG_MODE=1 \
+ENABLE_MIGRATIONS=true \
 pnpm --pm-on-fail=ignore start
 ```
+Where you would replace `postgres://postgres@localhost:5433/plc` with whatever the URL to your Postgres sever is.
+
+And, you would replace `2582` with whatever you want your port to be.
