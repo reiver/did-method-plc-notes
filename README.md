@@ -34,6 +34,7 @@ Now you have to decide whether you want to run it bare on your computer, or run 
 
 ### Bare
 
+In this section are the instructions if you want to run the `did-method-plc` on your bare computer (rather than inside of a Docker container).
 
 #### (Bare) Step 3: install dependencies
 
@@ -64,6 +65,8 @@ And, you would replace `2582` with whatever you want your port to be.
 
 ### Docker
 
+In this section are the instructions if you want to run the `did-method-plc` inside of a Docker container (rather than on your bare computer).
+
 #### (Docker) Step 3: directory
 
 ```
@@ -84,4 +87,24 @@ PORT=2582 \
 DEBUG_MODE=1 \
 ENABLE_MIGRATIONS=true \
 pnpm --pm-on-fail=ignore start
+```
+
+-----
+
+## Postgres
+
+To look at the Postgres database inside the Docker container you can do something such as the following:
+
+```
+docker exec -it plc-db psql -U pg -d plc
+```
+
+Some useful commands:
+
+```
+\l              list databases
+\dt             list tables
+\d table_name   describe a table
+SELECT * FROM table_name LIMIT 10;
+\q              quit
 ```
