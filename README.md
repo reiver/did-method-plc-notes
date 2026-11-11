@@ -101,10 +101,11 @@ docker exec -it pg-db-1 psql -U pg -d postgres
 
 Some useful commands:
 
-```
-\l              list databases
-\dt             list tables
-\d table_name   describe a table
-SELECT * FROM table_name LIMIT 10;
-\q              quit
-```
+| command                              | description         |
+|--------------------------------------|---------------------|
+| `\l`                                 | list databases      |
+| `\connect database_name`             | connect to database |
+| `\dt`                                | list tables         |
+| `\d table_name`                      | describe a table.   |
+| `SELECT * FROM table_name LIMIT 10;` |                     |
+| `\q`                                 | quit                |
