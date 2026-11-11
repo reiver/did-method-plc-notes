@@ -96,7 +96,7 @@ pnpm --pm-on-fail=ignore start
 To look at the Postgres database inside the Docker container you can do something such as the following:
 
 ```
-docker exec -it plc-db psql -U pg -d plc
+docker exec -it pg-db-1 psql -U pg -d postgres
 ```
 
 Some useful commands:
